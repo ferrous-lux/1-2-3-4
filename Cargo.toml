@@ -2,16 +2,23 @@
 name = "one_two_three_four"
 version = "0.1.0"
 edition = "2024"
+description = "A 2×2 number puzzle game compiled to WebAssembly — fill 1-4 with odd squares touching."
+repository = "https://github.com/ferrous-lux/1-2-3-4"
+license = "MIT"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 wasm-bindgen = "0.2"
-yew = { version = "0.21", features = ["csr"] }  # WASM frontend framework
-web-sys = { version = "0.3", features = ["console"] }
-js-sys = "0.3"
-console_error_panic_hook = "0.1"        # Print panics to browser console
+web-sys = { version = "0.3", features = [
+    "Document",
+    "Element",
+    "EventTarget",
+    "Node",
+    "Window",
+] }
+console_error_panic_hook = "0.1"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3"

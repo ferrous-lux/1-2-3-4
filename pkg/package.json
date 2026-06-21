@@ -1,0 +1,21 @@
+{
+  "name": "one_two_three_four",
+  "type": "module",
+  "description": "A 2×2 number puzzle game compiled to WebAssembly — fill 1-4 with odd squares touching.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferrous-lux/1-2-3-4"
+  },
+  "files": [
+    "one_two_three_four_bg.wasm",
+    "one_two_three_four.js",
+    "one_two_three_four.d.ts"
+  ],
+  "main": "one_two_three_four.js",
+  "types": "one_two_three_four.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
