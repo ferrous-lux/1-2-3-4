@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1-2-3-4</title>
+  <title>1-2-3-4 — The Number Puzzle Game</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,13 +11,261 @@
   <meta name="apple-mobile-web-app-title" content="1-2-3-4">
   <link rel="apple-touch-icon" href="icon.svg">
   <meta name="theme-color" content="#e94560">
+  <style>
+    .marketing {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .marketing h1 {
+      font-size: 3.5rem;
+      letter-spacing: 0.15em;
+      color: #e94560;
+      margin-bottom: 0.25rem;
+    }
+    .marketing .tagline {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 2.5rem;
+    }
+    .marketing .play-btn {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding: 1rem 3rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-bottom: 3rem;
+    }
+    .marketing .play-btn:hover {
+      background: #d63850;
+    }
+    .marketing .play-btn-small {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.6rem 1.8rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin: 1rem 0 2rem 0;
+    }
+    .marketing .play-btn-small:hover {
+      background: #d63850;
+    }
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    .features .feature {
+      background: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+    }
+    .features .feature h3 {
+      color: #e94560;
+      margin-bottom: 0.3rem;
+    }
+    .features .feature p {
+      color: #bbb;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .testimonial {
+      background: #0f3460;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .testimonial .quote {
+      font-style: italic;
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+    .testimonial .author {
+      color: #e94560;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat .number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e94560;
+    }
+    .stat .label {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    .badge {
+      background: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    .odd-repetition {
+      color: #555;
+      font-size: 0.7rem;
+      line-height: 1.4;
+      margin-top: 3rem;
+      border-top: 1px solid #0f3460;
+      padding-top: 2rem;
+    }
+    .odd-repetition p {
+      margin: 0.3rem 0;
+    }
+    .tiny-legal {
+      font-size: 0.55rem;
+      color: #333;
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module">
-    import init from "./pkg/one_two_three_four.js";
-    init();
-  </script>
+  <div class="marketing">
+    <h1>1-2-3-4</h1>
+    <p class="tagline">Fill the grid. Touch the odds. Train the mind.</p>
+
+    <a href="./game.html" class="play-btn">▶&nbsp; PLAY NOW</a>
+
+    <div class="features">
+      <div class="feature">
+        <h3>One Rule</h3>
+        <p>Odd-numbered squares must touch other odd-numbered squares. That is the entire game. You already know how to play.</p>
+      </div>
+      <div class="feature">
+        <h3>Four Modes</h3>
+        <p>Easy (3 prefilled), Medium (2 prefilled), Hard (1 prefilled), Extreme (0 prefilled). The difficulty scale has been clinically inverted for maximum engagement.</p>
+      </div>
+      <div class="feature">
+        <h3>No Ads. Ever.</h3>
+        <p>There are no advertisements. There will never be advertisements. We have no business model. We are not accepting venture capital.</p>
+      </div>
+      <div class="feature">
+        <h3>Offline First</h3>
+        <p>Installs to your home screen and works on a plane, in a tunnel, in a basement, or in a cabin in the woods with no signal. The grid does not require permission.</p>
+      </div>
+      <div class="feature">
+        <h3>16 Possible Grids</h3>
+        <p>There are exactly 16 ways to arrange 1–4 on a 2×2 grid where odd numbers touch. You will see all of them. You will master all of them.</p>
+      </div>
+    </div>
+
+    <a href="./game.html" class="play-btn-small">▶&nbsp; PLAY NOW</a>
+
+    <div class="stats-row">
+      <div class="stat">
+        <div class="number">4</div>
+        <div class="label">Cells</div>
+      </div>
+      <div class="stat">
+        <div class="number">16</div>
+        <div class="label">Valid Grids</div>
+      </div>
+      <div class="stat">
+        <div class="number">0</div>
+        <div class="label">Ads</div>
+      </div>
+      <div class="stat">
+        <div class="number">∞</div>
+        <div class="label">Replayability</div>
+      </div>
+    </div>
+
+    <a href="./game.html" class="play-btn-small">▶&nbsp; PLAY NOW</a>
+
+    <div class="testimonial">
+      <div class="quote">"I showed it to my mother and she didn't say anything for four minutes. That is the longest she has gone without mentioning the patio."</div>
+      <div class="author">— Mark T., Vermont</div>
+      <a href="./game.html" class="play-btn-small" style="margin-bottom:0">▶&nbsp; PLAY NOW</a>
+    </div>
+
+    <div class="testimonial">
+      <div class="quote">"I have been playing 1-2-3-4 for three days. I have not yet determined which number is my favorite. This is causing me to question everything."</div>
+      <div class="author">— Priya K., Portland</div>
+      <a href="./game.html" class="play-btn-small" style="margin-bottom:0">▶&nbsp; PLAY NOW</a>
+    </div>
+
+    <div class="testimonial">
+      <div class="quote">"The number 3 touched the number 1 on my screen and I felt a surge of something I can only describe as civic pride."</div>
+      <div class="author">— Doug, LinkedIn</div>
+      <a href="./game.html" class="play-btn-small" style="margin-bottom:0">▶&nbsp; PLAY NOW</a>
+    </div>
+
+    <a href="./game.html" class="play-btn-small">▶&nbsp; PLAY NOW</a>
+
+    <div class="badges">
+      <span class="badge">#1 in 2×2</span>
+      <span class="badge">No WiFi Required</span>
+      <span class="badge">Over 50% of Users Are Women Over 50</span>
+      <span class="badge">Rated ★★★★★ for a Game With 4 Cells</span>
+      <span class="badge">Vibe Coded 2026</span>
+      <span class="badge">Cryptographically Odd</span>
+      <span class="badge">As Seen on a GitHub Pages URL Somebody Sent You</span>
+      <span class="badge">Gluten Free</span>
+      <span class="badge">The Grid Does Not Know Your Name</span>
+      <span class="badge">Playable in One Thumb</span>
+      <span class="badge">Recommended by 3 Out of 4 Dentists Who Prefer Odd Numbers</span>
+      <span class="badge">Not Blockchain</span>
+      <span class="badge">No Patio Required</span>
+    </div>
+
+    <a href="./game.html" class="play-btn">▶&nbsp; PLAY NOW</a>
+
+    <div class="odd-repetition">
+      <p>Odd squares touch odd squares. Odd squares touch odd squares. Odd squares touch odd squares.</p>
+      <p>Even squares are alone. Even squares are alone. Even squares are alone.</p>
+      <p>This is the rule. This is the only rule. This is the rule. This is the only rule.</p>
+      <p>You will fill the grid. You will check the solution. You will fill the grid again.</p>
+      <p>1 and 3 are odd. 2 and 4 are even. 1 and 3 touch. 2 and 4 do not need to touch.</p>
+      <p>But they could. But they could. But they could. But they could. But they could.</p>
+      <p>The grid is 2 by 2. The grid is 2 by 2. The grid is 2 by 2. The grid is 2 by 2.</p>
+      <p>Touch the odd squares. Touch the odd squares. Touch the odd squares. Touch the odd squares.</p>
+      <p>Touch the odd squares. Touch the odd squares. Touch the odd squares. Touch the odd squares.</p>
+      <p>Touch the odd squares. Touch the odd squares. Touch the odd squares. Touch the odd squares.</p>
+      <p>Touch the odd squares. Touch the odd squares. Touch the odd squares. Touch the odd squares.</p>
+      <p>Touch the odd squares. Touch the odd squares. Touch the odd squares. Touch the odd squares.</p>
+      <a href="./game.html" class="play-btn-small" style="margin-top:1rem">▶&nbsp; PLAY NOW</a>
+    </div>
+
+    <div class="tiny-legal">
+      1-2-3-4 is a number puzzle game. The numbers 1, 2, 3, and 4 appear exactly once per grid. Odd-numbered squares (1, 3) must be orthogonally adjacent to at least one other odd-numbered square. This is not financial advice. The term "over 50% of users are women over 50" is based on an internal survey of one user who is both a woman and over 50 and also the developer's aunt. "Gluten free" refers to the digital nature of the product and has not been verified by the FDA. "Cryptographically odd" is not a real term. The patio comment has been fact-checked. No odd squares were harmed in the making of this website. Some squares may be even. All rights reserved, although we are not sure what we would even enforce. If the grid seems empty, you have not selected a mode. Please select a mode. The grid is waiting. The grid is always waiting. The grid is 2 by 2.
+      <a href="./game.html" class="play-btn-small" style="margin:1rem 0 0 0">▶&nbsp; PLAY NOW</a>
+    </div>
+  </div>
+
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js');

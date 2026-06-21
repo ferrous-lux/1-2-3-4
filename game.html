@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-2-3-4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="1-2-3-4">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <meta name="theme-color" content="#e94560">
+  <style>
+    .back-link {
+      position: fixed;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 0.75rem;
+      color: #555;
+      text-decoration: none;
+      z-index: 10;
+    }
+    .back-link:hover {
+      color: #e94560;
+    }
+  </style>
+</head>
+<body>
+  <a href="./index.html" class="back-link">← back to home</a>
+  <div id="app"></div>
+  <script type="module">
+    import init from "./pkg/one_two_three_four.js";
+    init();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+</body>
+</html>

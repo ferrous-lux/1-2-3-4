@@ -2,7 +2,7 @@
   "name": "1-2-3-4",
   "short_name": "1-2-3-4",
   "description": "A 2×2 number puzzle game — fill 1-4 with odd squares touching.",
-  "start_url": ".",
+  "start_url": "game.html",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#e94560",
