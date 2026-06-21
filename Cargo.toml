@@ -1,0 +1,21 @@
+[package]
+name = "one_two_three_four"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+yew = { version = "0.21", features = ["csr"] }  # WASM frontend framework
+web-sys = { version = "0.3", features = ["console"] }
+js-sys = "0.3"
+console_error_panic_hook = "0.1"        # Print panics to browser console
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[profile.release]
+opt-level = "s"
+lto = true
